@@ -1,2 +1,4 @@
 # Mini_Encuesta
-Programa Mini_Encuesta Desarrollado en Python,Flask, Sqlite
+Programa en python, flask y Sqlite que simula una sencilla encuesta de 2 opciones
+
+
