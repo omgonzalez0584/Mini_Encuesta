@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Agregar nueva encuesta</title>
+</head>
+<body style="text-align:center; background: #F5F5F5;">
+     <div style="display: block;width: 960px;margin: 15px auto;text-align:left;" >
+       <header  style="display: block;background: #DCDCDC;border: 1px solid #999999;
+                 text-align: center;padding: 20px;">
+           <h1 style="font: bold 30px verdana, sans-serif;">AGREGAR NUEVA ENCUESTA</h1></header>
+         <nav style="display: block;background: #CCCCCC;
+	           padding: 5px 15px:">
+
+             {%- for categoria, mensaje in get_flashed_messages(with_categories=true)  %}
+                <div class="alert alert-danger", id = "centro">
+                {{ mensaje }}
+                </div>
+              {%- endfor %}
+         </nav>
+
+          <section style="display: block;text-align:center;border: 1px solid #999999;
+	               width: 800px;margin: 20px;background:#DCDCDC">
+           <form action="{{ request.path }}" method="post">
+                <label style="font: 15px bold verdana, sans-serif;">Pregunta</label>
+                <input type="text" size ="70"  name="pregunta"><br>
+                <label style="font: 15px bold verdana, sans-serif;">Opcion 1</label>
+                <input type="text" name="opcion1"><br>
+                <label style="font: 15px bold verdana, sans-serif;">Opcion 2</label>
+                <input type="text" name="opcion2"><br>
+                <input type="submit" value="Crear">
+           </form>
+          </section>
+
+         <footer style="display: block;clear: both;text-align: center;padding: 20px;
+	               border-top: 2px solid #999999;">
+               Derechos reservados &copy; 2017-2018
+
+         </footer>
+     </div>
+</body>
+</html>

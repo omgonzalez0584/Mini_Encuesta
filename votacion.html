@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align:center; background: #F5F5F5;">
+  <div style="display: block;width: 960px;margin: 15px auto;text-align:left;">
+      <header style="display: block;background: #DCDCDC;border: 1px solid #999999;text-align: center;
+	             padding: 20px;">
+          <h1 style="font: bold 30px verdana, sans-serif;">TU OPINION CUENTA!</h1>
+      </header>
+
+      <nav style="display: block;background: #CCCCCC;
+	           padding: 5px 15px:">
+
+      </nav>
+
+
+      <section style="display: block;float: left;text-align:center;border: 1px solid #999999;
+	               width: 500px;margin: 20px;background:#DCDCDC">
+
+       <form action="http://127.0.0.1:5000/conteo/", method="post">
+        <p style="font: 25px verdana, sans-serif">{{u.pregunta}}</p>
+        <p style="font: 15px verdana, sans-serif">{{u.opcion1}}
+            <input type="checkbox" name="opc" value = "a"></p>
+        <p style="font: 15px verdana, sans-serif">{{u.opcion2}}
+            <input type="checkbox" name="opc" value = "b"></p>
+          <input type ="hidden" name = "id" , value = "{{u.id}}">
+         <input type ='submit'  value="Ingresar">
+       </form>
+      </section>
+
+      <footer style="display: block;clear: both;text-align: center;padding: 20px;
+	               border-top: 2px solid #999999;">
+          Derechos reservados &copy; 2017-2018
+
+      </footer>
+
+  </div>
+
+</body>
+</html>
