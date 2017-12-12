@@ -23,13 +23,13 @@
           <form action="http://127.0.0.1:5000/votar/" method="post">
 
              {% for i in encuesta %}
-                  <p style="font: 15px verdana, sans-serif;">{{i.pregunta}}</p>
+                  <p style="font: bold 15px verdana, sans-serif;">{{i.pregunta}}</p>
                   {% if i.voto1 == 0 and i.voto2 == 0 %}
                             <p style="font: 15px verdana, sans-serif;">{{i.opcion1}}  {{i.voto1}}%</p>
                              <p style="font: 15px verdana, sans-serif;">{{i.opcion2}}  {{i.voto2}}%</p>
                   {% else %}
-                       <p style="font: 15px verdana, sans-serif;">{{i.opcion1}}  {{i.voto1 / i.cantidad * 100}}%</p>
-                       <p style="font: 15px verdana, sans-serif;">{{i.opcion2}}  {{i.voto2 / i.cantidad * 100}}%</p>
+                  <p style="font: 15px verdana, sans-serif;">{{i.opcion1}} <meter value="{{i.voto1}}" max="{{i.cantidad}}"></meter> {{(i.voto1 / i.cantidad * 100)|int}}%</p>
+                  <p style="font: 15px verdana, sans-serif;">{{i.opcion2}} <meter value="{{i.voto2}}" max="{{i.cantidad}}"></meter> {{(i.voto2 / i.cantidad * 100)|int}}%</p>
                   {% endif %}
                   <p style="font: 15px verdana, sans-serif;"><label>Total de Votos </label> {{i.cantidad}}</p>
                   <p style="font: 15px verdana, sans-serif;"><input type="checkbox" id="{{i.id}}" name="id" value = "{{i.id}}"></p>
